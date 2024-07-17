@@ -30,7 +30,7 @@ public:
                                 loc_info.pose.orientation.w};
         Eigen::Matrix3d last_R = m_R_local;
         m_R_local = q.matrix();
-
+        
 
         Eigen::Vector3d last_position = m_position_local;
         m_position_local.x() = loc_info.pose.position.x;
