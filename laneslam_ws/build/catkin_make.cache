@@ -1,2 +1,0 @@
-openlane_bag
--DCATKIN_DEVEL_PREFIX=/home/seu/workspace/zjh_ws/laneslam_ws/devel -DCMAKE_INSTALL_PREFIX=/home/seu/workspace/zjh_ws/laneslam_ws/install -G Unix Makefiles
