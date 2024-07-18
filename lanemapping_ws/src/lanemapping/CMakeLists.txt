@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(my_pkg)
+project(lanemapper)
 
 # cmake -DCMAKE_PYTHON_INTERPRETER=/home/seu/anaconda3/bin/python3/
 ## Compile as C++11, supported in ROS Kinetic and newer
@@ -34,10 +34,11 @@ include_directories(
 	${catkin_INCLUDE_DIRS}
 	# ${EIGEN_INCLUDE_DIRS}
 )
+link_directories(
+  include
+)
 
-add_executable(lanemapper src/lanemapper.cpp)
-add_dependencies(lanemapper ${catkin_EXPORTED_TARGETS} lane_msgs_gencpp)
-target_link_libraries(lanemapper ${catkin_LIBRARIES} ${EIGEN_LIBRARIES})
+
 
 catkin_package(
   INCLUDE_DIRS include
@@ -48,10 +49,6 @@ catkin_package(
 #  DEPENDS system_lib
 )
 
-
-## Specify additional locations of header files
-## Your package locations should be listed before other locations
-include_directories(
-# include
-  ${catkin_INCLUDE_DIRS}
-)
+add_executable(lanemapper src/lanemapper.cpp)
+add_dependencies(lanemapper ${catkin_EXPORTED_TARGETS} lane_msgs_gencpp)
+target_link_libraries(lanemapper ${catkin_LIBRARIES} ${EIGEN_LIBRARIES})

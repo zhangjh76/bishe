@@ -1,0 +1,8 @@
+prefix=/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/install
+
+Name: lanemapper
+Description: Description of lanemapper
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: lane_msgs

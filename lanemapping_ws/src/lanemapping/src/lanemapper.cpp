@@ -24,11 +24,13 @@ public:
 
     void Loc_process(const geometry_msgs::PoseStamped loc_info){
 
+        Eigen::Matrix3d last_R = m_R_local;
+
         Eigen::Quaterniond q = {loc_info.pose.orientation.x, 
                                 loc_info.pose.orientation.y, 
                                 loc_info.pose.orientation.z, 
                                 loc_info.pose.orientation.w};
-        Eigen::Matrix3d last_R = m_R_local;
+        
         m_R_local = q.matrix();
         
 
@@ -37,11 +39,13 @@ public:
         m_position_local.y() = loc_info.pose.position.y;
         m_position_local.z() = loc_info.pose.position.z;
         
+        // ROS_INFO("x : %f , y : %f , z : %f ",m_position_local.x(), m_position_local.y(), m_position_local.z());
         m_t_diff = m_position_local - last_position;
+        ROS_INFO("t_diff : %f, %f, %f",m_t_diff.x(), m_t_diff.y(), m_t_diff.z());
         m_R_diff = m_R_local * last_R.transpose();
     }
     void LanemapperCallback(const lane_msgs::LaneListConstPtr& viperIn){
-        DataPreprocess();
+        DataPreprocess(viperIn);
     }
 
     void DataPreprocess(){

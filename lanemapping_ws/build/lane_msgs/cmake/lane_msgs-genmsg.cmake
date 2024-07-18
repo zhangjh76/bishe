@@ -24,7 +24,7 @@ add_custom_target(_lane_msgs_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/src/lane_msgs/msg/LaneList.msg" NAME_WE)
 add_custom_target(_lane_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "lane_msgs" "/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/src/lane_msgs/msg/LaneList.msg" "std_msgs/Header:lane_msgs/LanePoint:lane_msgs/Lane"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "lane_msgs" "/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/src/lane_msgs/msg/LaneList.msg" "std_msgs/Header:lane_msgs/Lane:lane_msgs/LanePoint"
 )
 
 get_filename_component(_filename "/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/src/lane_msgs/msg/LanePoint.msg" NAME_WE)
@@ -47,7 +47,7 @@ _generate_msg_cpp(lane_msgs
 _generate_msg_cpp(lane_msgs
   "/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/src/lane_msgs/msg/LaneList.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/src/lane_msgs/msg/LanePoint.msg;/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/src/lane_msgs/msg/Lane.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/src/lane_msgs/msg/Lane.msg;/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/src/lane_msgs/msg/LanePoint.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/lane_msgs
 )
 _generate_msg_cpp(lane_msgs
@@ -96,7 +96,7 @@ _generate_msg_eus(lane_msgs
 _generate_msg_eus(lane_msgs
   "/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/src/lane_msgs/msg/LaneList.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/src/lane_msgs/msg/LanePoint.msg;/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/src/lane_msgs/msg/Lane.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/src/lane_msgs/msg/Lane.msg;/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/src/lane_msgs/msg/LanePoint.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/lane_msgs
 )
 _generate_msg_eus(lane_msgs
@@ -145,7 +145,7 @@ _generate_msg_lisp(lane_msgs
 _generate_msg_lisp(lane_msgs
   "/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/src/lane_msgs/msg/LaneList.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/src/lane_msgs/msg/LanePoint.msg;/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/src/lane_msgs/msg/Lane.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/src/lane_msgs/msg/Lane.msg;/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/src/lane_msgs/msg/LanePoint.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/lane_msgs
 )
 _generate_msg_lisp(lane_msgs
@@ -194,7 +194,7 @@ _generate_msg_nodejs(lane_msgs
 _generate_msg_nodejs(lane_msgs
   "/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/src/lane_msgs/msg/LaneList.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/src/lane_msgs/msg/LanePoint.msg;/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/src/lane_msgs/msg/Lane.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/src/lane_msgs/msg/Lane.msg;/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/src/lane_msgs/msg/LanePoint.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/lane_msgs
 )
 _generate_msg_nodejs(lane_msgs
@@ -243,7 +243,7 @@ _generate_msg_py(lane_msgs
 _generate_msg_py(lane_msgs
   "/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/src/lane_msgs/msg/LaneList.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/src/lane_msgs/msg/LanePoint.msg;/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/src/lane_msgs/msg/Lane.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/src/lane_msgs/msg/Lane.msg;/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/src/lane_msgs/msg/LanePoint.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/lane_msgs
 )
 _generate_msg_py(lane_msgs

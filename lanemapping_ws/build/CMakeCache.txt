@@ -483,10 +483,10 @@ lane_msgs_DIR:PATH=/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/devel/share/l
 lane_msgs_SOURCE_DIR:STATIC=/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/src/lane_msgs
 
 //Value Computed by CMake
-lanemapping_BINARY_DIR:STATIC=/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/build/lanemapping
+lanemapper_BINARY_DIR:STATIC=/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/build/lanemapping
 
 //Value Computed by CMake
-lanemapping_SOURCE_DIR:STATIC=/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/src/lanemapping
+lanemapper_SOURCE_DIR:STATIC=/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/src/lanemapping
 
 //Path to a library.
 lib:FILEPATH=/opt/ros/noetic/lib/libxmlrpcpp.so
@@ -496,12 +496,6 @@ message_generation_DIR:PATH=/opt/ros/noetic/share/message_generation/cmake
 
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/noetic/share/message_runtime/cmake
-
-//Value Computed by CMake
-my_pkg_BINARY_DIR:STATIC=/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/build/lanemapping
-
-//Value Computed by CMake
-my_pkg_SOURCE_DIR:STATIC=/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/src/lanemapping
 
 //The directory containing a CMake configuration file for nav_msgs.
 nav_msgs_DIR:PATH=/opt/ros/noetic/share/nav_msgs/cmake

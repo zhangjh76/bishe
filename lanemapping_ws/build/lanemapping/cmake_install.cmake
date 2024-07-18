@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/build/lanemapping/catkin_generated/installspace/my_pkg.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/build/lanemapping/catkin_generated/installspace/lanemapper.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_pkg/cmake" TYPE FILE FILES
-    "/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/build/lanemapping/catkin_generated/installspace/my_pkgConfig.cmake"
-    "/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/build/lanemapping/catkin_generated/installspace/my_pkgConfig-version.cmake"
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lanemapper/cmake" TYPE FILE FILES
+    "/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/build/lanemapping/catkin_generated/installspace/lanemapperConfig.cmake"
+    "/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/build/lanemapping/catkin_generated/installspace/lanemapperConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_pkg" TYPE FILE FILES "/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/src/lanemapping/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lanemapper" TYPE FILE FILES "/home/seu/workspace/zjh_ws/bishe/lanemapping_ws/src/lanemapping/package.xml")
 endif()
 
