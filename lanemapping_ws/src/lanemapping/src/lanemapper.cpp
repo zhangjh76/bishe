@@ -1,4 +1,4 @@
-#include "utility.h"
+#include "utility.hpp"
 
 class LaneMapper{
     
@@ -11,15 +11,15 @@ public:
     LaneMapper()
     {
         init();
-        Sublocinfo = nh.subscribe<geometry_msgs/PoseStamped>("/gt_pose_wc",1,&LaneMapper::Loc_process, this);
-        Subviperline = nh.subscribe<lanemapper/LaneList>("/lanes_predict",1, &LaneMapper::lanemapper, this);
+        Sublocinfo = nh.subscribe<geometry_msgs::PoseStamped>("/gt_pose_wc",1,&LaneMapper::Loc_process, this);
+        Subviperline = nh.subscribe<lane_msgs::LaneList>("/lanes_predict",1, &LaneMapper::LanemapperCallback, this);
 
-        Publisher = nh.advertise<lanemapper/LaneList>("/buildedlane",);
+        Publaneline = nh.advertise<lane_msgs::LaneList>("/buildedlane",1);
     }
 
     void init(){
         m_position_local = {0, 0, 0};
-        m_R_local = Eigen::Indentity();
+        m_R_local = Eigen::Matrix3d::Identity();
     }
 
     void Loc_process(const geometry_msgs::PoseStamped loc_info){
@@ -40,20 +40,30 @@ public:
         m_t_diff = m_position_local - last_position;
         m_R_diff = m_R_local * last_R.transpose();
     }
+    void LanemapperCallback(const lane_msgs::LaneListConstPtr& viperIn){
+        DataPreprocess();
+    }
+
+    void DataPreprocess(){
+
+    }
 
 private:
-    static Eigen::Vector3d m_position_local;
-    static Eigen::Matrix3d m_R_local;
+
+    Eigen::Vector3d m_position_local;
+    Eigen::Matrix3d m_R_local;
     Eigen::Vector3d m_t_diff;
     Eigen::Matrix3d m_R_diff;
-}
+
+    ros::NodeHandle nh;
+};
 
 
 int main(int argc, char** argv)
 {
     ros::init(argc, argv, "lanemapper");
 
-    ros::NodeHandle nh;
+    // ros::NodeHandle nh;
 
     LaneMapper LM;
 
